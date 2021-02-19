@@ -1,0 +1,116 @@
+.slider-section {
+  position: relative;
+  max-width: 505px;
+  margin: 2rem auto 0;
+  padding: 2.2rem 0 1rem;
+  overflow: hidden;
+  & .section-title {
+    margin: 0 0.5rem;
+    top: 0;
+    text-transform: uppercase;
+  }
+  & .slides {
+    position: relative;
+    & .row__medium-6 {
+      display: inline-flex !important;
+      transform: translateX(-57%);
+      & .slide-box {
+        margin-bottom: 98px;
+        margin-right: 10px;
+        padding: 1rem 1rem;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid $mainLightGrey;
+
+        @mixin atLarge {
+          margin-bottom: 0;
+          padding: 1rem 1.5rem;
+        }
+
+        &__photo {
+          position: relative;
+          min-height: 225px;
+          margin: 0 auto;
+          text-align: center;
+          overflow: hidden;
+          & img {
+            max-height: 260px;
+          }
+        }
+
+        &__title {
+          color: $mainDarkGrey;
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 500;
+          margin: 0;
+        }
+
+        &__subtitle {
+          color: $mainOrange;
+          text-align: center;
+          font-weight: 600;
+          font-size: 1.1215rem;
+          margin: 1rem 0 1rem 0;
+        }
+
+        &__call {
+          color: $mainOrange;
+          text-align: center;
+          font-weight: 400;
+          font-size: 0.9275rem;
+          margin: 0.25rem 0 1rem 0;
+        }
+      }
+    }
+  }
+  & .flex-direction-nav {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 45%;
+    padding: 5rem;
+    transform: translateY(-50%);
+
+    & a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      overflow: hidden;
+      opacity: 0.6;
+      cursor: pointer;
+      text-shadow: none;
+      transition: all 0.3s ease-in-out;
+      color: rgba(0, 0, 0, 0.6);
+      background-color: #000;
+      border-radius: 50%;
+      &:hover {
+        opacity: 1;
+      }
+
+      &:before {
+        font-family: 'FontAwesome';
+        font-size: 25px;
+        display: inline-block;
+        content: '\f053';
+        color: rgba(255, 255, 255, 0.9);
+        transform: translate(-17%, 27%);
+      }
+
+      &.flex-next {
+        content: '\f054';
+        transform: scaleX(-1);
+      }
+    }
+
+    & .flex-nav-next {
+      position: absolute;
+      right: 0.5rem;
+    }
+    & .flex-nav-prev {
+      position: absolute;
+      left: 0.5rem;
+    }
+  }
+}

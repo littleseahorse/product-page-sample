@@ -1,0 +1,35 @@
+.feature-item {
+  padding: 1rem 0 0.5rem;
+  @mixin atMedium {
+    padding: 2rem 0 1.5rem;
+  }
+  & p.short-description {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  & .quick-points {
+    max-width: 320px;
+    min-width: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 300;
+    @mixin atSmall {
+      min-width: 365px;
+      padding-left: 40px;
+    }
+    & li {
+      line-height: 1.45rem;
+      font-size: 1rem;
+      &:before {
+        font-family: FontAwesome;
+        content: '\f058';
+        top: 0.1rem;
+        left: 0;
+        color: #9cd206;
+        padding: 0 0.8rem 0 0;
+      }
+    }
+  }
+}

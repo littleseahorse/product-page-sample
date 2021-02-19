@@ -1,0 +1,70 @@
+.product-image {
+  padding: 1.5rem 1.5rem 3rem;
+  & .promotion {
+    position: absolute;
+    left: 25%;
+    @mixin atLarge {
+      left: 15%;
+    }
+  }
+  & picture {
+    width: 100%;
+    text-align: center;
+    @mixin atLarge {
+      text-align: right;
+    }
+    & img {
+      width: 50%;
+      min-width: 320px;
+      max-width: 100%;
+      max-height: 450px;
+      @mixin atLarge {
+        width: 75%;
+      }
+    }
+  }
+}
+
+.product-sale {
+  justify-content: center;
+  padding: 1.5rem 1.5rem 3rem;
+  & div {
+    width: 100%;
+    margin-bottom: 0.3rem;
+  }
+  & .e-liquid-options {
+    padding-bottom: 100px;
+  }
+  & label {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  & select {
+    height: 2.5rem;
+    line-height: 1.5;
+    margin: 0 0 1rem;
+    padding: 0.5rem 0.7rem 0.7rem;
+    padding-right: 4rem;
+    appearance: none;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $mainDarkGrey;
+    background-image: url(data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZlcnNpb249JzEuMScgd2lkdGg9JzMyJyBoZWlnaHQ9JzI0JyB2aWV3Qm94PScwIDAgMzIgMjQnPjxwb2x5Z29uIHBvaW50cz0nMCwwIDMyLDAgMTYsMjQnIHN0eWxlPSdmaWxsOiByZ2IoMTM2LCAxMzYsIDEzNiknPjwvcG9seWdvbj48L3N2Zz4=);
+    background-origin: content-box;
+    background-position: right -3.5rem center;
+    background-repeat: no-repeat;
+    background-size: 14px 7px;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    &:focus {
+      outline: none;
+      border: 1px solid #888;
+      background-color: #fff;
+      box-shadow: 0 0 5px #ccc;
+      transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    }
+  }
+}
