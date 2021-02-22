@@ -32,3 +32,12 @@ a {
 .hidden {
   display: none;
 }
+
+.lazy {
+  transition: ease-in 0.4s;
+  opacity: 0;
+}
+.lazy.loaded,
+.lazy[data-was-processed='true'] {
+  opacity: 1;
+}
